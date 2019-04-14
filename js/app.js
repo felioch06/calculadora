@@ -35,6 +35,10 @@ $(document).ready(function(){
  $("#cero").on("click",function(){
  $("#resultado").append("0");
  });
+ $("#punto").on("click",function(){
+ $("#resultado").append(".");
+ });
+ 
  
  $("#reset").on("click",function(){
  resetear();
