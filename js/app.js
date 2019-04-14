@@ -63,6 +63,11 @@ $(document).ready(function(){
    operacion = "/";
    limpiar();
  });
+ $("#porcentaje").on("click",function(){
+ operandoa = $("#resultado").html();
+   operacion = "%";
+   limpiar();
+ });
  $("#igual").on("click",function(){
  operandob = $("#resultado").html();
    resolver();
@@ -98,6 +103,10 @@ function resolver(){
  
  case "/":
  res = parseFloat(operandoa) / parseFloat(operandob);
+ break;
+
+ case "%":
+ res = parseFloat(operandoa) % parseFloat(operandob);
  break;
  }
  resetear();
